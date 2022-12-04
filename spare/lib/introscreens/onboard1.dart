@@ -38,11 +38,14 @@ class _OnboardPage1State extends State<OnboardPage1> {
           const SizedBox(
             height: 30,
           ),
-          const Text(
-            "With spare, you can ask for bills,"
-            "food, entertainment, utilities and still save",
-            textAlign: TextAlign.center,
-            maxLines: 2,
+          const Padding(
+            padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+            child: Text(
+              "With spare, you can ask for bills,"
+              "food, entertainment, utilities and still save",
+              textAlign: TextAlign.center,
+              maxLines: 2,
+            ),
           ),
           const SizedBox(
             height: 20,
