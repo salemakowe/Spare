@@ -19,8 +19,9 @@ class _OnboardPage1State extends State<OnboardPage1> {
             padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
             alignment: Alignment.topCenter,
             child: Image.asset(
-              "assets/images/intro1.png",
+              "assets/img/intro1.png",
               width: MediaQuery.of(context).size.width * 0.7,
+              height: MediaQuery.of(context).size.height * 0.5,
             ),
           ),
           const SizedBox(
