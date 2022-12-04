@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import 'package:google_fonts/google_fonts.dart';
+import 'package:spare/constants/color.dart';
 
 class OnboardPage1 extends StatefulWidget {
   const OnboardPage1({super.key});
@@ -42,17 +43,32 @@ class _OnboardPage1State extends State<OnboardPage1> {
             padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
             child: Text(
               "With spare, you can ask for bills,"
-              "food, entertainment, utilities and still save",
+              "food, entertainment, utilities and still save.",
               textAlign: TextAlign.center,
               maxLines: 2,
+              style: TextStyle(
+                color: Color(0xff87898e),
+              ),
             ),
           ),
           const SizedBox(
-            height: 20,
+            height: 50,
           ),
-          ElevatedButton(
-            onPressed: () {},
-            child: Text("Get Started"),
+          SizedBox(
+            width: MediaQuery.of(context).size.width * 0.8,
+            height: MediaQuery.of(context).size.height * 0.08,
+            child: ElevatedButton(
+              onPressed: () {},
+              child: Text("Get Started"),
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Kolors.sendButton),
+                shape: MaterialStateProperty.all(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                ),
+              ),
+            ),
           ),
         ],
       ),

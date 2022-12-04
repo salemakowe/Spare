@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:spare/constants/color.dart';
 import 'package:spare/introscreens/onboard1.dart';
 
 class Onboarding extends StatefulWidget {
@@ -40,6 +41,7 @@ class _OnboardingState extends State<Onboarding> {
               effect: const WormEffect(
                 dotHeight: 12,
                 dotWidth: 12,
+                activeDotColor: Kolors.sendButton,
               ),
             ),
           ),
