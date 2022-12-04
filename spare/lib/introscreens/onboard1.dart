@@ -34,6 +34,10 @@ class _OnboardPage1State extends State<OnboardPage1> {
             //   fontSize: 20,
             // ),
           ),
+          Text(
+            "With spare, you can ask for bills,"
+            "food, entertainment, utilities and still save",
+          )
         ],
       ),
     );
