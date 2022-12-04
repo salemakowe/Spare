@@ -33,21 +33,22 @@ class _OnboardPage1State extends State<OnboardPage1> {
             "Spend & Save With Spare",
             style: GoogleFonts.inter(
               fontWeight: FontWeight.w700,
-              fontSize: 20,
+              fontSize: 23,
             ),
           ),
           const SizedBox(
-            height: 30,
+            height: 10,
           ),
-          const Padding(
-            padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
             child: Text(
               "With spare, you can ask for bills,"
               "food, entertainment, utilities and still save.",
               textAlign: TextAlign.center,
               maxLines: 2,
-              style: TextStyle(
-                color: Color(0xff87898e),
+              style: GoogleFonts.poppins(
+                color: const Color(0xff87898e),
+                fontSize: 13,
               ),
             ),
           ),
@@ -59,13 +60,18 @@ class _OnboardPage1State extends State<OnboardPage1> {
             height: MediaQuery.of(context).size.height * 0.08,
             child: ElevatedButton(
               onPressed: () {},
-              child: Text("Get Started"),
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(Kolors.sendButton),
                 shape: MaterialStateProperty.all(
                   RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30),
                   ),
+                ),
+              ),
+              child: Text(
+                "Get Started",
+                style: GoogleFonts.inter(
+                  fontWeight: FontWeight.w400,
                 ),
               ),
             ),
