@@ -28,16 +28,29 @@ class _OnboardPage1State extends State<OnboardPage1> {
             height: 30,
           ),
           Text(
+            textAlign: TextAlign.center,
             "Spend & Save With Spare",
-            // style: GoogleFonts.inter(
-            //   fontWeight: FontWeight.w600,
-            //   fontSize: 20,
-            // ),
+            style: GoogleFonts.inter(
+              fontWeight: FontWeight.w700,
+              fontSize: 20,
+            ),
           ),
-          Text(
+          const SizedBox(
+            height: 30,
+          ),
+          const Text(
             "With spare, you can ask for bills,"
             "food, entertainment, utilities and still save",
-          )
+            textAlign: TextAlign.center,
+            maxLines: 2,
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          ElevatedButton(
+            onPressed: () {},
+            child: Text("Get Started"),
+          ),
         ],
       ),
     );
