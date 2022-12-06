@@ -52,30 +52,6 @@ class _OnboardPage2State extends State<OnboardPage2> {
               ),
             ),
           ),
-          const SizedBox(
-            height: 50,
-          ),
-          SizedBox(
-            width: MediaQuery.of(context).size.width * 0.8,
-            height: MediaQuery.of(context).size.height * 0.08,
-            child: ElevatedButton(
-              onPressed: () {},
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Kolors.sendButton),
-                shape: MaterialStateProperty.all(
-                  RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30),
-                  ),
-                ),
-              ),
-              child: Text(
-                "Get Started",
-                style: GoogleFonts.inter(
-                  fontWeight: FontWeight.w400,
-                ),
-              ),
-            ),
-          ),
         ],
       ),
     );
