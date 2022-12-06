@@ -29,7 +29,7 @@ class _OnboardPage2State extends State<OnboardPage2> {
           ),
           Text(
             textAlign: TextAlign.center,
-            "Spend & Save With Spare",
+            "Spare is Easy & Secure",
             style: GoogleFonts.inter(
               fontWeight: FontWeight.w700,
               fontSize: 23,

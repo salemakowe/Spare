@@ -29,6 +29,17 @@ class _SignUpPageState extends State<SignUpPage> {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.transparent,
+        leading: IconButton(
+          onPressed: (() => Navigator.of(context).pushReplacement(
+                MaterialPageRoute(
+                  builder: (((context) => const LoginPage())),
+                ),
+              )),
+          icon: const Icon(
+            Icons.arrow_back_ios_outlined,
+            color: Colors.black,
+          ),
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),

@@ -1,24 +1,26 @@
 import 'dart:async';
 
 import "package:flutter/material.dart";
+import 'package:google_fonts/google_fonts.dart';
+import 'package:spare/screens/onboarding.dart';
 
-import 'splashscreen2.dart';
+// import 'splashscreen2.dart';
 
-class SplashScreen1 extends StatefulWidget {
-  const SplashScreen1({Key? key}) : super(key: key);
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({Key? key}) : super(key: key);
 
   @override
-  State<SplashScreen1> createState() => _SplashScreen1State();
+  State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _SplashScreen1State extends State<SplashScreen1> {
+class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 3), () {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
-          builder: ((context) => const SplashScreen2()),
+          builder: ((context) => const Onboarding()),
         ),
       );
     });
@@ -44,6 +46,14 @@ class _SplashScreen1State extends State<SplashScreen1> {
                   const SizedBox(
                     height: 10,
                   ),
+                  Text(
+                    "spare",
+                    style: GoogleFonts.inter(
+                      fontSize: 30,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.white,
+                    ),
+                  )
                 ],
               ),
             )
