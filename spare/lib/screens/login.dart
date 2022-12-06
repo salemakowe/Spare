@@ -2,6 +2,7 @@ import "package:flutter/material.dart";
 import 'package:google_fonts/google_fonts.dart';
 import 'package:spare/constants/color.dart';
 import 'package:spare/screens/home.dart';
+import 'package:spare/screens/signup.dart';
 import 'package:spare/widgets/button.dart';
 import 'package:spare/widgets/textfields.dart';
 
@@ -37,11 +38,13 @@ class _LoginPageState extends State<LoginPage> {
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              // crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
                   "Login",
-                  style: GoogleFonts.inter(fontSize: 20),
+                  style: GoogleFonts.inter(
+                    fontSize: 22,
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
               ],
             ),
@@ -110,23 +113,27 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
 
-            // Row(
-            //   children: [
-            //     RichText(
-            //       text: TextSpan(
-            //         text: "Don't have an account?",
-            //         style: GoogleFonts.inter(
-            //           fontSize: 14,
-            //         ),
-            //         children: [
-            //           TextSpan(
-            //             text: ,
-            //           )
-            //         ]
-            //       ),
-            //     )
-            //   ],
-            // ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Text(
+                  "Don't have an account? ",
+                  style: GoogleFonts.inter(
+                    fontSize: 13,
+                  ),
+                ),
+                TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(
+                        builder: ((context) => const SignUpPage()),
+                      ),
+                    );
+                  },
+                  child: const Text("Sign Up"),
+                ),
+              ],
+            ),
           ],
         ),
       ),

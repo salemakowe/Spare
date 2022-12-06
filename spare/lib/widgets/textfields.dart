@@ -33,6 +33,7 @@ class BuildInputFields extends StatelessWidget {
         hintText: hintText,
         hintStyle: GoogleFonts.inter(
           fontSize: 15,
+          fontWeight: FontWeight.w300,
           color: Kolors.textColor,
         ),
         enabledBorder: const OutlineInputBorder(
