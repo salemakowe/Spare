@@ -6,6 +6,7 @@ import 'package:spare/introscreens/onboard1.dart';
 import 'package:spare/introscreens/onboard2.dart';
 import 'package:spare/introscreens/onboard3.dart';
 import 'package:spare/screens/login.dart';
+import 'package:spare/widgets/button.dart';
 
 class Onboarding extends StatefulWidget {
   const Onboarding({Key? key}) : super(key: key);
@@ -46,40 +47,14 @@ class _OnboardingState extends State<Onboarding> {
           ),
 
           //button
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 15),
-            child: Align(
-              alignment: Alignment.bottomCenter,
-              child: SizedBox(
-                width: MediaQuery.of(context).size.width * 0.8,
-                height: MediaQuery.of(context).size.height * 0.08,
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(
-                        builder: ((context) => const LoginPage()),
-                      ),
-                    );
-                  },
-                  style: ButtonStyle(
-                    backgroundColor:
-                        MaterialStateProperty.all(Kolors.sendButton),
-                    shape: MaterialStateProperty.all(
-                      RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30),
-                      ),
-                    ),
-                  ),
-                  child: Text(
-                    "Get Started",
-                    style: GoogleFonts.inter(
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
-                ),
+          LoginSignUpButton(
+            text: "Get Started",
+            pressed: () => Navigator.of(context).pushReplacement(
+              MaterialPageRoute(
+                builder: ((context) => const LoginPage()),
               ),
             ),
-          ),
+          )
         ],
       ),
     );

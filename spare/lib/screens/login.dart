@@ -1,6 +1,8 @@
 import "package:flutter/material.dart";
 import 'package:google_fonts/google_fonts.dart';
 import 'package:spare/constants/color.dart';
+import 'package:spare/screens/home.dart';
+import 'package:spare/widgets/button.dart';
 import 'package:spare/widgets/textfields.dart';
 
 class LoginPage extends StatefulWidget {
@@ -11,6 +13,15 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  late bool _passwordVisible;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _passwordVisible = false;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,6 +44,8 @@ class _LoginPageState extends State<LoginPage> {
               ],
             ),
             const SizedBox(height: 20),
+
+            //Email field
             const BuildInputFields(
               hintText: "Email",
               isPassword: false,
@@ -43,15 +56,32 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             const SizedBox(height: 20),
-            const BuildInputFields(
+
+            //Password field
+            BuildInputFields(
               hintText: "Enter your password",
-              isPassword: true,
+              isPassword: _passwordVisible ? false : true,
               inputType: TextInputType.text,
-              pIcon: Icon(
-                Icons.lock_outlined,
-                color: Kolors.textColor,
+              pIcon: const Icon(Icons.lock_outlined, color: Kolors.textColor),
+              sIcon: IconButton(
+                icon: Icon(_passwordVisible
+                    ? Icons.visibility_outlined
+                    : Icons.visibility_off_outlined),
+                onPressed: () => setState(() {
+                  _passwordVisible = !_passwordVisible;
+                }),
               ),
             ),
+
+            //Button
+            LoginSignUpButton(
+              text: "Login",
+              pressed: () => Navigator.of(context).pushReplacement(
+                MaterialPageRoute(
+                  builder: ((context) => HomePage()),
+                ),
+              ),
+            )
           ],
         ),
       ),
