@@ -5,6 +5,7 @@ import 'package:spare/constants/color.dart';
 import 'package:spare/introscreens/onboard1.dart';
 import 'package:spare/introscreens/onboard2.dart';
 import 'package:spare/introscreens/onboard3.dart';
+import 'package:spare/screens/login.dart';
 
 class Onboarding extends StatefulWidget {
   const Onboarding({Key? key}) : super(key: key);
@@ -53,7 +54,13 @@ class _OnboardingState extends State<Onboarding> {
                 width: MediaQuery.of(context).size.width * 0.8,
                 height: MediaQuery.of(context).size.height * 0.08,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(
+                        builder: ((context) => const LoginPage()),
+                      ),
+                    );
+                  },
                   style: ButtonStyle(
                     backgroundColor:
                         MaterialStateProperty.all(Kolors.sendButton),

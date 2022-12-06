@@ -8,4 +8,5 @@ class Kolors {
   static const Color graphBlue = Color(0xff407aff);
   static const Color iconActive = Color(0xff407aff);
   static const Color iconNotActive = Color(0xff2c3988);
+  static const Color textColor = Color(0xff8789b3);
 }
