@@ -5,6 +5,7 @@ import '../constants/color.dart';
 
 class LoginSignUpButton extends StatelessWidget {
   final String text;
+  // ignore: prefer_typing_uninitialized_variables
   final pressed;
 
   const LoginSignUpButton({

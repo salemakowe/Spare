@@ -1,5 +1,4 @@
 import "package:flutter/material.dart";
-import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:spare/constants/color.dart';
 import 'package:spare/introscreens/onboard1.dart';

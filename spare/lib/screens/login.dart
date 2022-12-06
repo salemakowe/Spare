@@ -14,10 +14,10 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   late bool _passwordVisible;
+  final bool _isRememberMe = false;
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _passwordVisible = false;
   }
@@ -32,6 +32,8 @@ class _LoginPageState extends State<LoginPage> {
       body: Padding(
         padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -73,15 +75,58 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
 
+            const SizedBox(height: 20),
+
+            //Checkbox
+            Row(
+              children: [
+                Checkbox(
+                  value: _isRememberMe,
+                  onChanged: (value) => setState(() {
+                    _isRememberMe != value;
+                  }),
+                ),
+                const Text("Remember me"),
+                const Spacer(),
+                TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    "Forgot Password?",
+                    style: GoogleFonts.inter(
+                      fontSize: 13,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+
             //Button
             LoginSignUpButton(
               text: "Login",
               pressed: () => Navigator.of(context).pushReplacement(
                 MaterialPageRoute(
-                  builder: ((context) => HomePage()),
+                  builder: ((context) => const HomePage()),
                 ),
               ),
-            )
+            ),
+
+            // Row(
+            //   children: [
+            //     RichText(
+            //       text: TextSpan(
+            //         text: "Don't have an account?",
+            //         style: GoogleFonts.inter(
+            //           fontSize: 14,
+            //         ),
+            //         children: [
+            //           TextSpan(
+            //             text: ,
+            //           )
+            //         ]
+            //       ),
+            //     )
+            //   ],
+            // ),
           ],
         ),
       ),

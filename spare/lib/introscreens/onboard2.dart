@@ -1,6 +1,5 @@
 import "package:flutter/material.dart";
 import 'package:google_fonts/google_fonts.dart';
-import 'package:spare/constants/color.dart';
 
 class OnboardPage2 extends StatefulWidget {
   const OnboardPage2({super.key});
