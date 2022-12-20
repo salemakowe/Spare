@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import 'package:google_fonts/google_fonts.dart';
 import 'package:spare/screens/login.dart';
+import 'package:spare/screens/verifynumber.dart';
 
 import '../constants/color.dart';
 import '../widgets/button.dart';
@@ -142,7 +143,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 text: "Sign up",
                 pressed: () => Navigator.of(context).pushReplacement(
                   MaterialPageRoute(
-                    builder: ((context) => const HomePage()),
+                    builder: ((context) => const VerifyNumber()),
                   ),
                 ),
               ),
