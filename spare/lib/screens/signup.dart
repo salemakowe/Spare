@@ -129,6 +129,13 @@ class _SignUpPageState extends State<SignUpPage> {
               const SizedBox(height: 20),
 
               //Country
+              const BuildInputFields(
+                hintText: "Country",
+                isPassword: false,
+                inputType: TextInputType.text,
+                pIcon: Icon(Icons.person_outline, color: Kolors.textColor),
+              ),
+              const SizedBox(height: 20),
 
               //Button
               LoginSignUpButton(
