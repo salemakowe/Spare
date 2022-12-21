@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import 'package:google_fonts/google_fonts.dart';
+import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:spare/screens/login.dart';
 import 'package:spare/screens/verifynumber.dart';
 
@@ -93,13 +94,31 @@ class _SignUpPageState extends State<SignUpPage> {
               const SizedBox(height: 20),
 
               //Phone number
-              const BuildInputFields(
-                hintText: "Phone Number",
-                isPassword: false,
-                inputType: TextInputType.phone,
-                pIcon: Icon(Icons.phone_outlined, color: Kolors.textColor),
+              IntlPhoneField(
+                decoration: InputDecoration(
+                  border: const OutlineInputBorder(
+                      borderSide: BorderSide(
+                    color: Kolors.textColor,
+                  )),
+                  labelText: "Phone Number",
+                  labelStyle: GoogleFonts.inter(
+                    color: Kolors.textColor,
+                    fontWeight: FontWeight.w300,
+                  ),
+                  prefixIcon: const Icon(
+                    Icons.phone_outlined,
+                    color: Kolors.textColor,
+                  ),
+                  enabledBorder: const OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                    borderSide: BorderSide(color: Color(0xffdadada)),
+                  ),
+                  focusedBorder: const OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                    borderSide: BorderSide(color: Kolors.sendButton),
+                  ),
+                ),
               ),
-              const SizedBox(height: 20),
 
               //Email field
               const BuildInputFields(
