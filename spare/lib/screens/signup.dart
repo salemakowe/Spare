@@ -18,6 +18,7 @@ class SignUpPage extends StatefulWidget {
 
 class _SignUpPageState extends State<SignUpPage> {
   late bool _passwordVisible;
+  final phoneNumberController = TextEditingController();
 
   @override
   void initState() {
@@ -95,6 +96,7 @@ class _SignUpPageState extends State<SignUpPage> {
 
               //Phone number
               IntlPhoneField(
+                controller: phoneNumberController,
                 decoration: InputDecoration(
                   border: const OutlineInputBorder(
                       borderSide: BorderSide(

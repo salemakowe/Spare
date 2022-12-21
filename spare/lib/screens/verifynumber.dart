@@ -2,6 +2,9 @@ import "package:flutter/material.dart";
 import 'package:google_fonts/google_fonts.dart';
 
 import "package:spare/constants/color.dart";
+import 'package:spare/screens/home.dart';
+
+import '../widgets/button.dart';
 
 class VerifyNumber extends StatefulWidget {
   const VerifyNumber({super.key});
@@ -39,7 +42,7 @@ class _VerifyNumberState extends State<VerifyNumber> {
               ),
             ],
           ),
-          const SizedBox(height: 15),
+          const SizedBox(height: 20),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -51,14 +54,32 @@ class _VerifyNumberState extends State<VerifyNumber> {
                 ),
               ),
               Text(
-                "08179744123456",
+                "1234567890",
                 style: GoogleFonts.inter(
                   fontSize: 14,
                   fontWeight: FontWeight.bold,
                 ),
+              ),
+              const SizedBox(height: 10),
+              Row(
+                children: [],
               )
             ],
-          )
+          ),
+          const SizedBox(height: 20),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              LoginSignUpButton(
+                text: "Verify & Proceed",
+                pressed: () => Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(
+                    builder: ((context) => const HomePage()),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );

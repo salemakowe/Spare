@@ -37,6 +37,7 @@ class LoginSignUpButton extends StatelessWidget {
               text,
               style: GoogleFonts.inter(
                 fontWeight: FontWeight.w400,
+                fontSize: 16,
               ),
             ),
           ),
