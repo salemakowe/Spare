@@ -25,8 +25,11 @@ class _VerifyNumberState extends State<VerifyNumber> {
         actions: [
           IconButton(
             onPressed: () {
-              Navigator.of(context).pop(MaterialPageRoute(
-                  builder: ((context) => const SignUpPage())));
+              Navigator.of(context).pushReplacement(
+                MaterialPageRoute(
+                  builder: ((context) => const SignUpPage()),
+                ),
+              );
             },
             icon: const Icon(
               Icons.close_outlined,
