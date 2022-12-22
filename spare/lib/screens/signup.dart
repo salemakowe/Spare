@@ -157,6 +157,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 inputType: TextInputType.text,
                 pIcon: Icon(Icons.person_outline, color: Kolors.textColor),
               ),
+
               const SizedBox(height: 20),
 
               //Button
@@ -169,6 +170,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 ),
               ),
 
+              //Already have an account
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
