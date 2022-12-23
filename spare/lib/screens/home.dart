@@ -16,29 +16,7 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.transparent,
         elevation: 0,
       ),
-      body: Padding(
-        padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-        child: Column(
-          children: [
-            Row(
-              children: [
-                Column(
-                  children: [
-                    RichText(
-                      text: const TextSpan(
-                        text: "Good morning",
-                        children: [TextSpan(text: "Ugo")],
-                      ),
-                    )
-                    // Text("Good morning, "),
-                    // Text("Ugo"),
-                  ],
-                )
-              ],
-            ),
-          ],
-        ),
-      ),
+      body: Column(),
       bottomNavigationBar: CurvedNavigationBar(
         items: const [
           Icon(Icons.home),
