@@ -1,5 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import "package:flutter/material.dart";
+import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -20,22 +21,38 @@ class _HomePageState extends State<HomePage> {
         children: [
           Row(
             children: [
+              //User's avatar
               Column(
-                children: [CircleAvatar()],
+                children: const [CircleAvatar()],
               ),
+
+              const SizedBox(width: 4),
+
+              //Greetings and User's name
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Row(
                     children: [
                       Text(
-                        "Good morning",
+                        "Good morning,",
+                        style: GoogleFonts.inter(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                        ),
                       )
                     ],
                   ),
                   Row(
-                    children: [Text("Ugo")],
+                    children: [
+                      Text(
+                        "Ugo",
+                        style: GoogleFonts.inter(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
                   )
                 ],
               ),
