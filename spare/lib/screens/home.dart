@@ -1,6 +1,7 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import "package:flutter/material.dart";
 import 'package:google_fonts/google_fonts.dart';
+import 'package:spare/constants/color.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -17,45 +18,64 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.transparent,
         elevation: 0,
       ),
+
+      //body
       body: Column(
         children: [
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               //User's avatar
-              Column(
-                children: const [CircleAvatar()],
-              ),
-
-              const SizedBox(width: 4),
-
-              //Greetings and User's name
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+              Row(
                 children: [
-                  Row(
+                  Column(
+                    children: const [CircleAvatar()],
+                  ),
+
+                  const SizedBox(width: 4),
+
+                  //Greetings and User's name
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        "Good morning,",
-                        style: GoogleFonts.inter(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w400,
-                        ),
+                      Row(
+                        children: [
+                          Text(
+                            "Good morning,",
+                            style: GoogleFonts.inter(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          )
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            "Ugo",
+                            style: GoogleFonts.inter(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
                       )
                     ],
                   ),
-                  Row(
-                    children: [
-                      Text(
-                        "Ugo",
-                        style: GoogleFonts.inter(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ],
-                  )
                 ],
               ),
+
+              //notification bell
+              Column(
+                children: [
+                  IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.notifications_outlined,
+                        color: Kolors.sendButton,
+                      ))
+                ],
+              )
             ],
           )
         ],
