@@ -14,14 +14,6 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   backgroundColor: Colors.transparent,
-      //   elevation: 0,
-      //   actions: [
-
-      //   ],
-      // ),
-
       //body
       body: Padding(
         padding: const EdgeInsets.fromLTRB(10, 20, 10, 10),
@@ -82,7 +74,27 @@ class _HomePageState extends State<HomePage> {
                   ],
                 )
               ],
-            )
+            ),
+            const SizedBox(height: 30),
+
+            //Container for the card
+            Container(
+              width: MediaQuery.of(context).size.width * 0.9,
+              height: MediaQuery.of(context).size.height * 0.23,
+              color: Kolors.creditGreen,
+            ),
+
+            const SizedBox(height: 10),
+
+            //Add money Row
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(),
+                Container(),
+                Container(),
+              ],
+            ),
           ],
         ),
       ),
