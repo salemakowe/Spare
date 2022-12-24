@@ -14,71 +14,77 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-      ),
+      // appBar: AppBar(
+      //   backgroundColor: Colors.transparent,
+      //   elevation: 0,
+      //   actions: [
+
+      //   ],
+      // ),
 
       //body
-      body: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              //User's avatar
-              Row(
-                children: [
-                  Column(
-                    children: const [CircleAvatar()],
-                  ),
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(10, 20, 10, 10),
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                //User's avatar
+                Row(
+                  children: [
+                    Column(
+                      children: const [CircleAvatar()],
+                    ),
 
-                  const SizedBox(width: 4),
+                    const SizedBox(width: 4),
 
-                  //Greetings and User's name
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: [
-                          Text(
-                            "Good morning,",
-                            style: GoogleFonts.inter(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w400,
+                    //Greetings and User's name
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            Text(
+                              "Good morning,",
+                              style: GoogleFonts.inter(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400,
+                              ),
+                            )
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Text(
+                              "Ugo",
+                              style: GoogleFonts.inter(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
-                          )
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Text(
-                            "Ugo",
-                            style: GoogleFonts.inter(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ],
-                      )
-                    ],
-                  ),
-                ],
-              ),
+                          ],
+                        )
+                      ],
+                    ),
+                  ],
+                ),
 
-              //notification bell
-              Column(
-                children: [
-                  IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
-                        Icons.notifications_outlined,
-                        color: Kolors.sendButton,
-                      ))
-                ],
-              )
-            ],
-          )
-        ],
+                //notification bell
+                Column(
+                  children: [
+                    IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.notifications_outlined,
+                          color: Kolors.sendButton,
+                        ))
+                  ],
+                )
+              ],
+            )
+          ],
+        ),
       ),
       bottomNavigationBar: CurvedNavigationBar(
         items: const [
