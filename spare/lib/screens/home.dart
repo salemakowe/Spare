@@ -2,6 +2,7 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import "package:flutter/material.dart";
 import 'package:google_fonts/google_fonts.dart';
 import 'package:spare/constants/color.dart';
+import 'package:spare/widgets/addmoney.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -81,23 +82,58 @@ class _HomePageState extends State<HomePage> {
             Container(
               width: MediaQuery.of(context).size.width * 0.9,
               height: MediaQuery.of(context).size.height * 0.23,
-              color: Kolors.creditGreen,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                color: Kolors.graphBlue,
+              ),
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Row(
+                      children: [
+                        Text(
+                          "spare balance",
+                          style: GoogleFonts.inter(
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 10),
+                    Row(
+                      children: [
+                        Text(
+                          "N10,000",
+                          style: GoogleFonts.inter(
+                            color: Colors.white,
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
             ),
 
-            const SizedBox(height: 10),
+            const SizedBox(height: 15),
 
             //Add money Row
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Container(),
-                Container(),
-                Container(),
-              ],
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: const [],
+              ),
             ),
           ],
         ),
       ),
+
+      //Bottom Navigation
       bottomNavigationBar: CurvedNavigationBar(
         items: const [
           Icon(Icons.home),
