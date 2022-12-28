@@ -161,36 +161,42 @@ class _SignUpPageState extends State<SignUpPage> {
               const SizedBox(height: 20),
 
               //Button
-              LoginSignUpButton(
-                text: "Sign up",
-                pressed: () => Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(
-                    builder: ((context) => const VerifyNumber()),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                child: LoginSignUpButton(
+                  text: "Sign up",
+                  pressed: () => Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(
+                      builder: ((context) => const VerifyNumber()),
+                    ),
                   ),
                 ),
               ),
 
               //Already have an account
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Text(
-                    "Already have an account? ",
-                    style: GoogleFonts.inter(
-                      fontSize: 13,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 0, 10, 20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text(
+                      "Already have an account? ",
+                      style: GoogleFonts.inter(
+                        fontSize: 13,
+                      ),
                     ),
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      Navigator.of(context).pushReplacement(
-                        MaterialPageRoute(
-                          builder: ((context) => const LoginPage()),
-                        ),
-                      );
-                    },
-                    child: const Text("Login"),
-                  ),
-                ],
+                    TextButton(
+                      onPressed: () {
+                        Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(
+                            builder: ((context) => const LoginPage()),
+                          ),
+                        );
+                      },
+                      child: const Text("Login"),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),

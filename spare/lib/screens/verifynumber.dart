@@ -145,18 +145,21 @@ class _VerifyNumberState extends State<VerifyNumber> {
             const SizedBox(height: 20),
 
             //Button
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                LoginSignUpButton(
-                  text: "Verify & Proceed",
-                  pressed: () => Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(
-                      builder: ((context) => const HomePage()),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0, 0, 0, 40),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  LoginSignUpButton(
+                    text: "Verify & Proceed",
+                    pressed: () => Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(
+                        builder: ((context) => const HomePage()),
+                      ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ],
         ),

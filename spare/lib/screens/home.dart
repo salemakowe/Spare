@@ -103,7 +103,7 @@ class _HomePageState extends State<HomePage> {
           Icon(Icons.home),
           Icon(Icons.account_balance_wallet_outlined),
           Icon(Icons.send_outlined),
-          Icon(Icons.sms_outlined),
+          Icon(Icons.settings_outlined),
         ],
         animationCurve: Curves.easeInOut,
         backgroundColor: Colors.blueAccent,

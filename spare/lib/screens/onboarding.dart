@@ -46,11 +46,14 @@ class _OnboardingState extends State<Onboarding> {
           ),
 
           //button
-          LoginSignUpButton(
-            text: "Get Started",
-            pressed: () => Navigator.of(context).pushReplacement(
-              MaterialPageRoute(
-                builder: ((context) => const LoginPage()),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 10, 0, 50),
+            child: LoginSignUpButton(
+              text: "Get Started",
+              pressed: () => Navigator.of(context).pushReplacement(
+                MaterialPageRoute(
+                  builder: ((context) => const LoginPage()),
+                ),
               ),
             ),
           )

@@ -104,11 +104,14 @@ class _LoginPageState extends State<LoginPage> {
             ),
 
             //Button
-            LoginSignUpButton(
-              text: "Login",
-              pressed: () => Navigator.of(context).pushReplacement(
-                MaterialPageRoute(
-                  builder: ((context) => const HomePage()),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0, 50, 0, 0),
+              child: LoginSignUpButton(
+                text: "Login",
+                pressed: () => Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(
+                    builder: ((context) => const HomePage()),
+                  ),
                 ),
               ),
             ),
