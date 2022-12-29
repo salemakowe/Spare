@@ -21,8 +21,8 @@ class AddWithdrawMoney extends StatelessWidget {
           width: MediaQuery.of(context).size.width * 0.4,
           height: MediaQuery.of(context).size.height * 0.06,
           decoration: BoxDecoration(
+            border: Border.all(color: Colors.red),
             borderRadius: BorderRadius.circular(20),
-            color: Colors.red,
           ),
         ),
       ),

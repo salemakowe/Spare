@@ -126,7 +126,12 @@ class _HomePageState extends State<HomePage> {
               scrollDirection: Axis.horizontal,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: const [],
+                children: const [
+                  AddWithdrawMoney(
+                    boxName: "Add money",
+                    pIcon: Icon(Icons.add),
+                  )
+                ],
               ),
             ),
           ],
