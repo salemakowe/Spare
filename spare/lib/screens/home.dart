@@ -1,5 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import "package:flutter/material.dart";
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:spare/constants/color.dart';
 import 'package:spare/widgets/addmoney.dart';
@@ -140,11 +141,12 @@ class _HomePageState extends State<HomePage> {
 
       //Bottom Navigation
       bottomNavigationBar: CurvedNavigationBar(
-        items: const [
-          Icon(Icons.home),
-          Icon(Icons.account_balance_wallet_outlined),
-          Icon(Icons.send_outlined),
-          Icon(Icons.settings_outlined),
+        items: [
+          SvgPicture.asset("assets/svg/homeIcon.svg"),
+          SvgPicture.asset("assets/svg/transactionIcon.svg"),
+          SvgPicture.asset("assets/svg/sendIcon.svg"),
+          SvgPicture.asset("assets/svg/profileIcon.svg"),
+          SvgPicture.asset("assets/svg/settingsIcon.svg"),
         ],
         animationCurve: Curves.easeInOut,
         backgroundColor: Colors.blueAccent,
