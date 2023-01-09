@@ -142,10 +142,10 @@ class _HomePageState extends State<HomePage> {
       //Bottom Navigation
       bottomNavigationBar: CurvedNavigationBar(
         items: [
-          SvgPicture.asset("assets/svg/homeIcon.svg"),
           SvgPicture.asset("assets/svg/transactionIcon.svg"),
+          SvgPicture.asset("assets/svg/homeIcon.svg"),
           SvgPicture.asset("assets/svg/sendIcon.svg"),
-          SvgPicture.asset("assets/svg/profileIcon.svg"),
+          // SvgPicture.asset("assets/svg/profileIcon.svg"),
           SvgPicture.asset("assets/svg/settingsIcon.svg"),
         ],
         animationCurve: Curves.easeInOut,
