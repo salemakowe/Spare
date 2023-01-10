@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 
 class Kolors {
+  static const Color mainColor = Color(0xff2c3988);
   static const Color debtRed = Color(0xffff6565);
   static const Color creditGreen = Color(0xff1be387);
   static const Color sendButton = Color(0xff407aff);

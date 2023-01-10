@@ -40,7 +40,7 @@ class _OnboardingState extends State<Onboarding> {
               effect: const WormEffect(
                 dotHeight: 12,
                 dotWidth: 12,
-                activeDotColor: Kolors.sendButton,
+                activeDotColor: Kolors.mainColor,
               ),
             ),
           ),

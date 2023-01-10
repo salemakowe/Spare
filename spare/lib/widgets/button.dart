@@ -26,7 +26,7 @@ class LoginSignUpButton extends StatelessWidget {
           child: ElevatedButton(
             onPressed: pressed,
             style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all(Kolors.sendButton),
+              backgroundColor: MaterialStateProperty.all(Kolors.mainColor),
               shape: MaterialStateProperty.all(
                 RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30),
