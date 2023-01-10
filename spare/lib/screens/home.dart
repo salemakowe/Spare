@@ -3,6 +3,7 @@ import "package:flutter/material.dart";
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:spare/constants/color.dart';
+import 'package:spare/screens/bodytab.dart';
 import 'package:spare/widgets/addmoney.dart';
 
 class HomePage extends StatefulWidget {
@@ -70,8 +71,8 @@ class _HomePageState extends State<HomePage> {
                     IconButton(
                         onPressed: () {},
                         icon: const Icon(
-                          Icons.notifications_outlined,
-                          color: Kolors.sendButton,
+                          Icons.add_outlined,
+                          color: Kolors.mainColor,
                         ))
                   ],
                 )
@@ -122,19 +123,9 @@ class _HomePageState extends State<HomePage> {
 
             const SizedBox(height: 15),
 
-            //Add money Row
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: const [
-                  AddWithdrawMoney(
-                    boxName: "Add money",
-                    pIcon: Icon(Icons.add),
-                  )
-                ],
-              ),
-            ),
+            //Services and Transaction
+
+            BodyTab(),
           ],
         ),
       ),
