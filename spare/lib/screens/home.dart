@@ -71,7 +71,8 @@ class _HomePageState extends State<HomePage> {
                     IconButton(
                         onPressed: () {},
                         icon: const Icon(
-                          Icons.add_outlined,
+                          semanticLabel: "Add wallet",
+                          Icons.add_circle_outlined,
                           color: Kolors.mainColor,
                         ))
                   ],
@@ -86,7 +87,7 @@ class _HomePageState extends State<HomePage> {
               height: MediaQuery.of(context).size.height * 0.23,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
-                color: Kolors.graphBlue,
+                color: Kolors.mainColor,
               ),
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
@@ -125,7 +126,7 @@ class _HomePageState extends State<HomePage> {
 
             //Services and Transaction
 
-            BodyTab(),
+            const BodyTab(),
           ],
         ),
       ),
