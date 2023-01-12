@@ -150,7 +150,8 @@ class _HomePageState extends State<HomePage> {
 
       //Bottom Navigation
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Kolors.mainColor,
+        selectedItemColor: Kolors.mainColor,
+        showSelectedLabels: true,
         showUnselectedLabels: true,
         elevation: 0,
         currentIndex: _selectedIndex,
@@ -179,7 +180,7 @@ class _HomePageState extends State<HomePage> {
           //More BottomNavBar
 
           BottomNavigationBarItem(
-            icon: Icon(Icons.more_horiz),
+            icon: Icon(Icons.apps),
             label: "More",
             tooltip: "More",
           ),

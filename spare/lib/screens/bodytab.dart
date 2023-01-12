@@ -28,11 +28,11 @@ class _BodyTabState extends State<BodyTab> {
                     fontSize: 15,
                     fontWeight: FontWeight.w500,
                   ),
-                  tabs: [
-                    const Tab(
+                  tabs: const [
+                    Tab(
                       text: "Services",
                     ),
-                    const Tab(text: "Transactions"),
+                    Tab(text: "Transactions"),
                     // TabBarView(
                     //   children: [
                     //     Text("Send"),
