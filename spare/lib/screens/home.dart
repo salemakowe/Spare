@@ -1,9 +1,10 @@
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import "package:flutter/material.dart";
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:spare/constants/color.dart';
 import 'package:spare/screens/bodytab.dart';
+import 'package:spare/screens/history.dart';
+import 'package:spare/screens/more.dart';
+import 'package:spare/screens/notifications.dart';
 import 'package:spare/widgets/addmoney.dart';
 
 class HomePage extends StatefulWidget {
@@ -14,6 +15,22 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  int _selectedIndex = 0; // for the nav bar selected index
+
+  //to build the body of the page when the selected index is tapped
+  final _buildNavBody = const [
+    HomePage(),
+    HistoryPage(),
+    NotificationsPage(),
+    MorePage(),
+  ];
+
+  void _onItemtapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -132,16 +149,41 @@ class _HomePageState extends State<HomePage> {
       ),
 
       //Bottom Navigation
-      bottomNavigationBar: CurvedNavigationBar(
-        items: [
-          SvgPicture.asset("assets/svg/transactionIcon.svg"),
-          SvgPicture.asset("assets/svg/homeIcon.svg"),
-          SvgPicture.asset("assets/svg/sendIcon.svg"),
-          // SvgPicture.asset("assets/svg/profileIcon.svg"),
-          SvgPicture.asset("assets/svg/settingsIcon.svg"),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Kolors.mainColor,
+        showUnselectedLabels: true,
+        elevation: 0,
+        currentIndex: _selectedIndex,
+        onTap: _onItemtapped,
+        items: const <BottomNavigationBarItem>[
+          //Home  BottomNavBar
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: "Home",
+          ),
+
+          //History BottomNavBar
+
+          BottomNavigationBarItem(
+            icon: Icon(Icons.history),
+            label: "History",
+          ),
+
+          //Notifications BottomNavBar
+
+          BottomNavigationBarItem(
+            icon: Icon(Icons.notifications),
+            label: "Notification",
+          ),
+
+          //More BottomNavBar
+
+          BottomNavigationBarItem(
+            icon: Icon(Icons.more_horiz),
+            label: "More",
+            tooltip: "More",
+          ),
         ],
-        animationCurve: Curves.easeInOut,
-        backgroundColor: Colors.blueAccent,
       ),
     );
   }
