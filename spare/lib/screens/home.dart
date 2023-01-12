@@ -16,21 +16,13 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  // int _selectedIndex = 0; // for the nav bar selected index
-
-  //to build the body of the page when the selected index is tapped
-  final _buildNavBody = const [
-    HomePage(),
-    HistoryPage(),
-    NotificationsPage(),
-    MorePage(),
-  ];
-
-  // void _onItemtapped(int index) {
-  //   setState(() {
-  //     _selectedIndex = index;
-  //   });
-  // }
+  // //to build the body of the page when the selected index is tapped
+  // final _buildNavBody = const [
+  //   HomePage(),
+  //   HistoryPage(),
+  //   NotificationsPage(),
+  //   MorePage(),
+  // ];
 
   @override
   Widget build(BuildContext context) {
