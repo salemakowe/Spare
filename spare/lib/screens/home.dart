@@ -6,6 +6,7 @@ import 'package:spare/screens/history.dart';
 import 'package:spare/screens/more.dart';
 import 'package:spare/screens/notifications.dart';
 import 'package:spare/widgets/addmoney.dart';
+import 'package:spare/widgets/bottomnavbar.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -15,7 +16,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int _selectedIndex = 0; // for the nav bar selected index
+  // int _selectedIndex = 0; // for the nav bar selected index
 
   //to build the body of the page when the selected index is tapped
   final _buildNavBody = const [
@@ -25,11 +26,11 @@ class _HomePageState extends State<HomePage> {
     MorePage(),
   ];
 
-  void _onItemtapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
+  // void _onItemtapped(int index) {
+  //   setState(() {
+  //     _selectedIndex = index;
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -149,43 +150,7 @@ class _HomePageState extends State<HomePage> {
       ),
 
       //Bottom Navigation
-      bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: Kolors.mainColor,
-        showSelectedLabels: true,
-        showUnselectedLabels: true,
-        elevation: 0,
-        currentIndex: _selectedIndex,
-        onTap: _onItemtapped,
-        items: const <BottomNavigationBarItem>[
-          //Home  BottomNavBar
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: "Home",
-          ),
-
-          //History BottomNavBar
-
-          BottomNavigationBarItem(
-            icon: Icon(Icons.history),
-            label: "History",
-          ),
-
-          //Notifications BottomNavBar
-
-          BottomNavigationBarItem(
-            icon: Icon(Icons.notifications),
-            label: "Notification",
-          ),
-
-          //More BottomNavBar
-
-          BottomNavigationBarItem(
-            icon: Icon(Icons.apps),
-            label: "More",
-            tooltip: "More",
-          ),
-        ],
-      ),
+      bottomNavigationBar: BottomNavBar(),
     );
   }
 }
