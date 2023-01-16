@@ -1,4 +1,8 @@
 import "package:flutter/material.dart";
+import 'package:spare/screens/history.dart';
+import 'package:spare/screens/home.dart';
+import 'package:spare/screens/more.dart';
+import 'package:spare/screens/notifications.dart';
 
 import '../constants/color.dart';
 
@@ -8,6 +12,13 @@ class BottomNavBar extends StatefulWidget {
 }
 
 class _BottomNavBarState extends State<BottomNavBar> {
+  static const List _pages = <Widget>[
+    HomePage(),
+    HistoryPage(),
+    NotificationsPage(),
+    MorePage(),
+  ];
+
   int _selectedIndex = 0;
   // for the nav bar selected index
   void _onItemtapped(int index) {
